@@ -1,1 +1,0 @@
-# csci599-lol-team-pages.github.io
