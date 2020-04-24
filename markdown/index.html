@@ -11,7 +11,7 @@
 		
 	
 	<title>Technical Paper | League of Legends Overlay Assistant </title>
-	<link rel="stylesheet" type="text/css" media="all" href="../rw_common/themes/Engineer/consolidated-3.css?rwcache=609398320" />
+	<link rel="stylesheet" type="text/css" media="all" href="../rw_common/themes/Engineer/consolidated-3.css?rwcache=609401686" />
 		
 	    
 </head>
@@ -27,7 +27,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto"><li class="nav-item"><a href="../" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="../photos/" rel="" class="nav-link">Gallery</a></li><li class="nav-item active"><a href="./" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="../blog/" rel="" class="nav-link">Blog</a></li><li class="nav-item"><a href="../markdown-2/" rel="" class="nav-link">Team</a></li></ul>
+				<ul class="navbar-nav ml-auto"><li class="nav-item"><a href="../" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="../photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item active"><a href="./" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="../markdown-2/" rel="" class="nav-link">Team</a></li></ul>
 			</div>
 		</nav>
 
@@ -47,29 +47,194 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 main">
-                        <h1 id="pyqtexamples">PyQt Examples</h1>
+                        <h2 id="csci599finalprojecttechnicalpaperofleagueoflegendsassistanttool">CSCI 599 Final Project Technical Paper of League of Legends Assistant Tool</h2>
+
+<p><a href="../resources/CSCI-599-Final-Project-Technical-Paper-of-League-of-Legends-Assistant-Tool.pdf">Download PDF Version</a></p>
+
+<h2 id="1.introduction:">1. Introduction:</h2>
+
+<h3 id="1.1purpose">1.1 Purpose</h3>
+
+<p>The purpose of our project is to create a toolbox for League of Legends players to improve their skills in rank games. It won’t be a guidance tool or some introduction of this game, the target audience of our tool will be those players who want to win more in ranks but have no time to watch pro videos and study the counter picks or item builds.</p>
+
+<p>Most of our teammates play this game, so we can build our tool using both machine learning and our own game understanding, this could help us handle the problems might appear in our ML models, or even design our own model to handle the data we collected.</p>
+
+<h3 id="1.2gamebackground">1.2 Game Background</h3>
+
+<p>League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory. [1]</p>
+
+<p>League of Legends (LoL) is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Inspired by the Warcraft III: The Frozen Throne mod Defense of the Ancients, the game follows a freemium model and is supported by microtransactions. [2]</p>
+
+<h3 id="1.3projectscope">1.3 Project Scope</h3>
+
+<p>Our project is a LOL overlay toolbox, we are going to have 2 main functions:</p>
+
+<ul>
+<li><p>The first one is about champion ban/pick, we will give advice based on the enemy team's champion bans and help our users get champions they are afraid of. </p></li>
+<li><p>The second function will be an in-game item build guide, we will detect the enemy team's build and your champion select, give advice on your next build.</p></li>
+</ul>
+
+<h2 id="2.priorresearchrelatedtoleagueoflegends:">2.Prior Research Related to League of Legends:</h2>
+
+<h3 id="2.1leagueai">2.1 League AI</h3>
+
+<p>League AI is a machine learning project based on the champion movement and attack. It was created by Oleffa, who was a PhD student, in 2017, and updated in 2019. This project is an implementation of a robot player using Vayne (a champion in the game) to attack minions and move, he chose PyTorch and YOLOv3 as his main tools to build this AI player, trained it and let it play as a human. The old version was written using TensorFlow, but no longer update now.[3]</p>
+
+<p>We can use this project as a guide of monitoring the game interface, as we are going to use the images in game to detect objects, his project can be really helpful for us.</p>
+
+<h3 id="2.2pyqtexamples">2.2 PyQt Examples</h3>
 
 <p>A GitHub tutorial about how to use PyQt5 and many examples for testing. [4] We learn about how to use PyQt to write our user interface based on a desktop pet project.</p>
 
-<h2 id="2.3poroimagesandamikudesktoppet">2.3 Poro Images and a Miku Desktop Pet</h2>
+<h3 id="2.3poroimagesandamikudesktoppet">2.3 Poro Images and a Miku Desktop Pet</h3>
 
-<p>We fund a Miku (a Japanese cartoon character) desktop pet written in python, and we find some Poro (a pet in LOL game) images, our interface build is by modifying the desktop pet app, change the images of Miku to Poro, then rebuild the buttons and functions we need.
-2.4 LoL Minimap Scanner
-This is a project on CSDN.net, it is able to recognize champion avatar on the minimap. This project use OpenCV and trained their model by TensorFlow platform, CNN model. [5] This is really similar to what we want to do, we want to be able to recognize champion both in game and during selection process, so this could be a super fit guide for us.
-2.5 LoL API
-The official tool from Riot Game Company, help developers begin developing their own tools and products for the League of Legends player community. [6] We can get our images and basic champion stats from here, also, some of the API can get pro games data, which may be </p>
+<p>We fund a Miku (a Japanese cartoon character) desktop pet written in python, and we find some Poro (a pet in LOL game) images, our interface build is by modifying the desktop pet app, change the images of Miku to Poro, then rebuild the buttons and functions we need.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean euismod. Risus pretium quam vulputate dignissim suspendisse in est. Egestas pretium aenean pharetra magna ac. Dictum fusce ut placerat orci nulla pellentesque. Ac ut consequat semper viverra nam libero justo. Feugiat nisl pretium fusce id velit ut tortor pretium. Aliquam faucibus purus in massa tempor nec. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Nam at lectus urna duis convallis convallis tellus. Odio euismod lacinia at quis risus. Semper risus in hendrerit gravida. Diam maecenas ultricies mi eget mauris. Non tellus orci ac auctor augue mauris augue neque gravida. Et leo duis ut diam quam nulla porttitor.</p>
+<h3 id="2.4lolminimapscanner">2.4 LoL Minimap Scanner</h3>
 
-<p>Ullamcorper malesuada proin libero nunc. Accumsan tortor posuere ac ut consequat semper viverra. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. A iaculis at erat pellentesque adipiscing. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Eu nisl nunc mi ipsum faucibus. Sed libero enim sed faucibus turpis in eu mi bibendum. Ac turpis egestas integer eget.</p>
+<p>This is a project on CSDN.net, it is able to recognize champion avatar on the minimap. This project use OpenCV and trained their model by TensorFlow platform, CNN model. [5] This is really similar to what we want to do, we want to be able to recognize champion both in game and during selection process, so this could be a super fit guide for us.</p>
 
-<h2 id="2.5lolapi">2.5 LoL API</h2>
+<h3 id="2.5lolapi">2.5 LoL API</h3>
 
-<p>Integer eget aliquet nibh praesent tristique. Ut lectus arcu bibendum at varius vel. Id nibh tortor id aliquet lectus. Magna fringilla urna porttitor rhoncus dolor purus non. Gravida dictum fusce ut placerat orci nulla pellentesque. Tortor condimentum lacinia quis vel eros donec. Varius quam quisque id diam vel quam elementum pulvinar. Auctor urna nunc id cursus metus aliquam eleifend mi in. Tempor commodo ullamcorper a lacus vestibulum. Commodo sed egestas egestas fringilla phasellus faucibus. Semper auctor neque vitae tempus. Egestas dui id ornare arcu odio ut sem. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Lectus quam id leo in. Eu augue ut lectus arcu bibendum at varius vel.</p>
+<p>The official tool from Riot Game Company, help developers begin developing their own tools and products for the League of Legends player community. [6] We can get our images and basic champion stats from here, also, some of the API can get pro games data, which may be very helpful when we start training our model. The Tournament API enable us to create custom game and doing tests in those private rooms, basically this is the platform we will use during the whole project.</p>
 
-<p>Ipsum a arcu cursus vitae congue mauris rhoncus aenean. Nibh praesent tristique magna sit amet. Hendrerit dolor magna eget est lorem. Vel quam elementum pulvinar etiam non quam. Sed odio morbi quis commodo odio aenean sed adipiscing. Diam vel quam elementum pulvinar etiam non quam. Tincidunt id aliquet risus feugiat in ante metus dictum. Lorem donec massa sapien faucibus et molestie ac. Amet facilisis magna etiam tempor orci eu lobortis. Ut tellus elementum sagittis vitae et leo duis ut. Viverra justo nec ultrices dui. Mauris a diam maecenas sed enim ut. Tincidunt augue interdum velit euismod in pellentesque. Urna et pharetra pharetra massa massa ultricies. Volutpat diam ut venenatis tellus in. Sed turpis tincidunt id aliquet. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices.</p>
+<h3 id="2.6tensorflow2.0humanfacerecognition">2.6 Tensorflow2.0 Human Face Recognition</h3>
 
-<p>Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Dolor morbi non arcu risus quis varius quam quisque. Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Etiam non quam lacus suspendisse faucibus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Eget gravida cum sociis natoque penatibus. Vestibulum lectus mauris ultrices eros in cursus turpis massa. Purus viverra accumsan in nisl. Sagittis eu volutpat odio facilisis mauris sit amet massa. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Risus nec feugiat in fermentum posuere urna nec. Malesuada fames ac turpis egestas. Amet purus gravida quis blandit. Senectus et netus et malesuada fames ac turpis. Tincidunt eget nullam non nisi est sit amet. Proin sagittis nisl rhoncus mattis rhoncus. Diam sit amet nisl suscipit adipiscing bibendum. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Neque egestas congue quisque egestas diam.</p>
+<p>A project of human face recognition based on OpenCV and TensorFlow. [7] We study their method of preprocessing graphs, and learn from their CNN network, to build one of our main models: image recognition model. This is the first step of our project, we get in-game information by image recognition, we detect the images in game and use them as input. Those images can be items icon or champions icon, we scan the game window and get those images, using this model to convert them into meaningful strings so that we can use.</p>
+
+<p>To use the model we trained, we find another example project which is small and easy to understand. It doesn’t even require our computer to have a powerful GPU, and we are using the method provided in this blog. [8]</p>
+
+<h3 id="2.7acomprehensiveguidetoocrwithtesseract">2.7 A comprehensive guide to OCR with Tesseract</h3>
+
+<p>This is the method we use to listen the screen, detect where the user is. Explain this by introducing the definition of OCR: OCR = Optical Character Recognition. In other words, OCR systems transform a two-dimensional image of text, that could contain machine printed or handwritten text from its image representation into machine-readable text. [9] Our tool will take a screen shot of the game client every second, so we can get a picture of the game client, and by using OCR, we recognize highlight words on the screen, so we can know which page our user is looking at. </p>
+
+<p>This tutorial gives us a guide of how to use OCR with Tesseract, OpenCV and Python. Combining the OCR technique, Poro interface and our image recognizer, we have the prototype of our project.</p>
+
+<h3 id="2.8leaguex">2.8 League X</h3>
+
+<p>This is the project we used to detect the enemy champion’s location on minimap, [10] we have contacted the author and got the permission. Basically, he detects the red cycles on minimap, then get the screenshot on those red cycles, then we trained our own CNN model to detect the champions’ identities.</p>
+
+<h2 id="3.proposedsolution">3. Proposed Solution</h2>
+
+<h3 id="3.1banpickassistanttool">3.1 Ban/Pick Assistant tool</h3>
+
+<h4 id="3.1.1frontenddesignlogic">3.1.1 Frontend Design Logic</h4>
+
+<p>We have finished the B/P assistant tool, this tool enables our user to get a champion pick suggestion based on the champions banned by enemy team. We build our tool based on screen capture and image detection; we trained a model using the profile image of 148 champions, this model is been used to detect the banned champion identity, use them as the input of our model, give a suggestion for our user to pick, like showing in the following picture:
+<img src="../resources/Figure1--Champion-B:P-interface.png" alt="Figure1: Champion B/P interface" /></p>
+
+<p>For the image detection model training, we use CNN with over 120000 images as input, the final accuracy is nearly 100% and we never had any misdetection during our test. </p>
+
+<h3 id="3.1.2backenddesignlogic">3.1.2 Backend Design Logic</h3>
+
+<p>Then we collected the win rate data (the win rate against specific champions) of all 148 champions form opgg.com, generated a correlation matrix using spearman correlation. Also, we collected the official champion stats including their health, attack, magic…, we also generated a correlation matrix using cosine similarity based on this dataset. The input of our model is the banned champions (both the enemy bans and ally bans), and the position our user is playing. We get the most similar champion that can play this position from both matrices, and combine the result, those champions appear in both matrices are candidates. Finally, we sort the candidates based on the overall win rate, show the top 3 result on the screen
+<img src="../resources/Graph1--Function-1-Process.png" alt="Graph1- Function 1 Process.png" /></p>
+
+<p>Graph1: Function 1 Process</p>
+
+<h3 id="3.2ingameitembuildadvice">3.2 Ingame Item Build Advice</h3>
+
+<h4 id="3.2.1datacollection">3.2.1 Data Collection</h4>
+
+<p>This part includes both image data and game records. We collect image data of all items from LOLWiki.com, image for champion skins from mobafire.com, cycled champion profile image are collected from our own screenshots. For all those data, we need the champion profile data to detect the enemy team and ally team when we click ‘tab’ in game; for skin data, we need to detect “who am I playing” using those skin pictures on the dashboard; and the item data is collect to train an image detection model to detect what items they bought and what I already have.</p>
+
+<p>The game records data is the core data we will use in function 2, so we decide to collect them from players in Korea Server (the server has highest average skills). We search for each champion, collect the top 50 players’ game records, who have the highest champion mastery on this champion and have a higher ranking than Dimond 2. In all, we have more than 70000 game record data, we know the champion played by our target players, we know the enemy team’s build, and we know the result of this game.</p>
+
+<h4 id="3.2.2modeltraining">3.2.2 Model Training</h4>
+
+<p>We use the game records data collected in phase 1 as input, using Linear Regression to generate a model. By converting the enemy’s items as numerical input, we give these parameters for each item: (CD, Health, Magic resist, Mana, Health Regen, Ability Power, Movement Speed, Attack Speed, Attack damage, Life Steal, Armor, Crit chance, Armor penetration, Magic penetration, Heal resist)</p>
+
+<figure>
+<img src="../resources/Figure2-Item-Parameters-.png" alt="Figure2 Item Parameters .png" />
+<figcaption>Figure2 Item Parameters .png</figcaption></figure>
+
+<p>Figure2: Item Parameters </p>
+
+<p>The final output will be a float number between 0 and 1, which represents the possible win rate for some specific build against the current enemy team’s build.</p>
+
+<h4 id="3.2.3backenddesignlogic">3.2.3 Backend Design Logic</h4>
+
+<p>Using the win rate predicted by our model, we check different possible build for a champion, then we return 3 to 4 items that we believe to have the greatest possible (with highest win rate) to help our player win this game. Also, these builds cannot have conflicts (2 items may have same “unique passive”, means we cannot waste money on them even they both have very high predicted win rate), so we only choose items in an entire build set to test, and these build sets are collected from pro players’ and highly ranked players’ records.</p>
+
+<figure>
+<img src="../resources/Graph2--Function-2-Process.png" alt="Graph2- Function 2 Process.png" />
+<figcaption>Graph2- Function 2 Process.png</figcaption></figure>
+
+<p>Graph2: Function 2 Process</p>
+
+<h4 id="3.2.4frontenddesignlogic">3.2.4 Frontend Design Logic</h4>
+
+<p>As this is an in-game function, a fancy interface is not what we need, the better way to show our result is to make it as simple as possible and left the majority space on the screen for the game itself. Based on this thought, we will show our detection result (including enemy builds and your current build) once you clicked “Tab” to check the score board. When you recalled back to your basement, and click the shop, our build suggestion will show as a litter black suggestion box on the top right corner, you can click the items in it to search in the shop, and will never blind anything on the map.</p>
+
+<figure>
+<img src="../resources/Figure3--Item-Detection-(in-game).png" alt="Figure3: Item Detection (in-game)" />
+<figcaption>Figure3: Item Detection (in-game)</figcaption></figure>
+
+<figure>
+<img src="../resources/Figure4--Build-Suggestion-(in-game).png" alt="Figure4: Build Suggestion (in-game)" />
+<figcaption>Figure4: Build Suggestion (in-game)</figcaption></figure>
+
+<h3 id="3.3minimapwarning">3.3 Minimap Warning</h3>
+
+<h4 id="3.3.1backenddesignlogic">3.3.1 Backend Design Logic</h4>
+
+<p>We keep tracking enemy’s icons on minimap, and got screen shot each second, then we record each champions location on this (255*255) map for the last 5 seconds. Our program will calculate the distance between each enemy champion and your line, for example, if you play Jungle, then you have to keep an eye on the Baron and Dragon. We keep tracking enemy’s location and calculate the distance between them and Baron/Dragon, if they keep getting close to these 2 positions for 2 to 3 seconds in last 5 seconds, and their location 5 seconds ago is not too far from these 2 positions, our user will get an alert. We won’t send any alert if the enemy is showing on the minimap all the time, because players should notice their movement by themselves, we just give warnings when you lost their positions for a while.</p>
+
+<p>Also, before this function starts, we have to detect our user’s champion and enemy team’s champion. Because the CNN cannot reach 100% accuracy, so we will only start function 3 when we have all 5 enemy champions detected as the same in both minimap and dashboard. </p>
+
+<figure>
+<img src="../resources/Graph3--Function-3-Process.png" alt="Graph3: Function 3 Process" />
+<figcaption>Graph3: Function 3 Process</figcaption></figure>
+
+<p>3.3.2 Frontend Design Logic</p>
+
+<p>We use a priority-queue to evaluate the enemy’s movement, level-5 means they have no interest to you, level-4 means they are focusing on your teammates, level-3 means they are moving towards you but you should noticed on minimap so we don’t warn you, level-2 means they are missing, we cannot make sure what they are doing at this time, level-1 will have a red notification box on the top-right, means someone is heading to you and getting really close. </p>
+
+<p>As we design our app as an isolate program, our user has to run LOL client in “Boardless” mode, otherwise they may not get any notifications because the game interface is above everything else. Also, you can check the last message by clicking on the icon of our software. It will be show on the left of the minimap, you can also drag it or change the transparence of it as your wish.</p>
+
+<figure>
+<img src="../resources/Figure5--Enemy-Gank-Warning.png" alt="Figure5: Enemy Gank Warning" />
+<figcaption>Figure5: Enemy Gank Warning</figcaption></figure>
+
+<h2 id="4.resultandanalysis">4. Result and Analysis</h2>
+
+<p>All 3 functions we built are really useful when playing this game, it fulfills the purpose of our software: to maximize the possibility of victory. We build this app to help our user win more games, and we reached our purpose by image detection and historical data training. This mode can be used on any online competitional game because we don’t need the source code, instead, we detect the game interface and recognize characters, items, gears…, then collect historical match record data and train a model to find a way to increase your win-rate. This is not hard, in each game, those high score players will share a lot of common habits, and that is the reason why they can win so many games. The job left to us is to let machine learn their habit, learn from their experience and then tell our users what to do. Make right decision for gamers, then the only thing they need to do is to focus on their operations.</p>
+
+<p>Also, we find the shortcomings of our solution to this problem. We choose image detection as our path, but there’s no image detection can get 100% accuracy, and if we have grayscale images (which is normal in video games), the accuracy will incredibly drop because we only have shapes now.</p>
+
+<h2 id="5.futureplan">5. Future Plan</h2>
+
+<h3 id="5.1runeselectionbeforegettingintothegame">5.1 Rune Selection before getting into the Game</h3>
+
+<p>We are planning to have an additional function to function 1, which helps our user to decide what runes to bring to start this game. We can detect all 5 champions on the enemy team and see which of the possible rune set can gives our player the highest win rate. </p>
+
+<p>However, we are facing a problem now that we cannot detect the champion we are using before we get into the game, if we can have a solution to this problem, we will have this function in our app.</p>
+
+<h3 id="5.2customizedrpshop">5.2 Customized RP Shop</h3>
+
+<p>If we can have the access to one user’s RP purchase history, then we can train a recommendation system based on these data and create the customized shop for him/her.</p>
+
+<h2 id="6.reference">6. Reference</h2>
+
+<p>[1] League of Legends (2020, Feb 6). How to play. Retrieved from: https://na.leagueoflegends.com/en-us/how-to-play/.</p>
+
+<p>[2] Nguyen, Thierry (2009, September 1). Clash of the DOTAs. Retrieved from: <a href="https://web.archive.org/web/20111128151953/http:/www.1up.com/features/clash-dotas-league-legends-heroes">https://web.archive.org/web/20111128151953/http://www.1up.com/features/clash-dotas-league-legends-heroes</a>.</p>
+
+<p>[3] Oleffa (2019, Nov 26). LeagueAI software framework for League of Legends that provides information about the state of the game based on Image Recognition using OpenCV and Pytorch. Retrieved from: https://github.com/Oleffa/LeagueAI.</p>
+
+<p>[4] Kongmo (2020, Jan 16). PyQt Examples. Retrieved from: https://github.com/PyQt5/PyQt </p>
+
+<p>[5] Cheng, Chang (2019, July 9). LOL Minimap Scanner. Retrieved from: https://blog.csdn.net/weixin_42488182/article/details/95088716.</p>
+
+<p>[6] Riot (2020, Feb 6). LEAGUE OF LEGENDS API. Retrieved from: https://developer.riotgames.com/docs/lol</p>
+
+<p>[7] PeepFuture (2019, Nov 3). Tensorflow2.0 Human Face Recognition. Retrieved from: https://blog.csdn.net/qq_41495871/article/details/102886182.</p>
+
+<p>[8] Xu, Dada (2018, Mar 3). Use trained model by OpenCV and TensorFlow. Retrieved from: https://blog.csdn.net/hust_bochu_xuchao/article/details/79428759</p>
+
+<p>[9] Zelic, Filip (2019, Dec 15). A comprehensive guide to OCR with Tesseract, OpenCV and Python. Retrieved from: https://nanonets.com/blog/ocr-with-tesseract/</p>
+
+<p>[10] Cheng (2020, March 27). League-X. Retrieved from: https://github.com/dcheng728/League-X</p>
                     </div>
 
                     <div class="col-sm-12 sidebar">
@@ -85,14 +250,14 @@ The official tool from Riot Game Company, help developers begin developing their
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 footer-content">
-					<ul class="navbar-nav ml-auto"><li class="nav-item"><a href="../" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="../photos/" rel="" class="nav-link">Gallery</a></li><li class="nav-item active"><a href="./" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="../blog/" rel="" class="nav-link">Blog</a></li><li class="nav-item"><a href="../markdown-2/" rel="" class="nav-link">Team</a></li></ul>
+					<ul class="navbar-nav ml-auto"><li class="nav-item"><a href="../" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="../photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item active"><a href="./" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="../markdown-2/" rel="" class="nav-link">Team</a></li></ul>
 					CSCI 599 &copy; USC <a href="#" id="rw_email_contact">Contact Us</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":zi";var _rwObsfuscatedHref3 = "hen";var _rwObsfuscatedHref4 = "ggo";var _rwObsfuscatedHref5 = "@us";var _rwObsfuscatedHref6 = "c.e";var _rwObsfuscatedHref7 = "du";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6+_rwObsfuscatedHref7; document.getElementById("rw_email_contact").href = _rwObsfuscatedHref;</script>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	<script type="text/javascript" src="../rw_common/themes/Engineer/js/main.js?rwcache=609398320"></script>
+	<script type="text/javascript" src="../rw_common/themes/Engineer/js/main.js?rwcache=609401686"></script>
 </body>
 
 </html>
