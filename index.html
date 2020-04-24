@@ -8,10 +8,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="robots" content="index, follow" />
 		<meta name="generator" content="RapidWeaver" />
-		
+		<link rel="apple-touch-icon" sizes="167x167" href="https://csci599-lol.site/resources/medium.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://csci599-lol.site/resources/pngkey.com-league-of-legends-logo-241828.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://csci599-lol.site/resources/small.png" />
+<link rel="mask-icon" href="https://csci599-lol.site/resources/pngkey.com-league-of-legends-logo-241828.png" color="rgba(0,0,255,1.00)" /><link rel="icon" type="image/png" href="https://csci599-lol.site/resources/favicon_medium.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://csci599-lol.site/resources/favicon_small.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://csci599-lol.site/resources/favicon_large.png" sizes="64x64" />
+
 	
 	<title>Home | League of Legends Overlay Assistant </title>
-	<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/Engineer/consolidated.css?rwcache=609401686" />
+	<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/Engineer/consolidated.css?rwcache=609403621" />
 		
 	  <style type="text/css" media="all">.iframe-container {
 	overflow: hidden;
@@ -41,14 +47,14 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto"><li class="nav-item active"><a href="./" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item"><a href="markdown/" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="markdown-2/" rel="" class="nav-link">Team</a></li></ul>
+				<ul class="navbar-nav ml-auto"><li class="nav-item active"><a href="./" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item"><a href="markdown/" rel="" class="nav-link">Technical Detail</a></li><li class="nav-item"><a href="markdown-2/" rel="" class="nav-link">Team</a></li></ul>
 			</div>
 		</nav>
 
 		<div class="hero-content container d-flex align-items-center" id="hero">
 			<div class="">
 				<h1 class="hero-title">League of Legends Overlay Assistant </h1>
-				<p class="hero-slogan display-4">Say hello to the Future</p>
+				<p class="hero-slogan display-4">Say hello to the Master Rank</p>
 			</div>
 			<div class="hero-background" title="League of Legends Overlay Assistant "></div>
 			<div class="hero-overlay"></div>
@@ -61,7 +67,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 main">
-                        <p>Cras vitae augue varius, commodo lectus eget, tempor mi. Aliquam a malesuada nisi. Fusce ac leo sed mauris finibus tempor. Quisque vitae auctor enim. Duis imperdiet nulla eu malesuada convallis. Aenean consequat nec dui sed mattis. Pellentesque a bibendum nibh. Nulla vitae tempus justo. Praesent rhoncus ac mi quis sodales. Duis at ante porta, maximus massa aliquam, euismod nisi.</p>
+                        <p>The goal is to create a toolbox for League of Legends players to improve their skills in rank games. We build our tool using both machine learning and our own game understanding, this could help us handle the problems might appear in our ML models, or even design our own model to handle the data we collected.</p>
+
+<p>It is not a guidance tool or an introduction of this game, the target users are those players who want to win more in ranks but have no time to watch pro videos and study the counter picks or item builds. The assistant also helps users getting the most useful information about the minimap, without kepping eyes on it.</p>
 
 <p><img src="resources/gank-warning.jpg" alt="gank warning.jpg" /></p>
 
@@ -71,15 +79,15 @@
 
 <h2 id="banpickassistant">Ban/Pick Assistant</h2>
 
-<p>Cras vitae augue varius, commodo lectus eget, tempor mi. Aliquam a malesuada nisi. Fusce ac leo sed mauris finibus tempor. Quisque vitae auctor enim. Duis imperdiet nulla eu malesuada convallis. Aenean consequat nec dui sed mattis. Pellentesque a bibendum nibh. Nulla vitae tempus justo. Praesent rhoncus ac mi quis sodales. Duis at ante porta, maximus massa aliquam, euismod nisi.</p>
+<p>We build this based on screen capture and image detection; we trained a model using the profile image of 148 champions, this model is been used to detect the banned champion identity, use them as the input of our model, give a suggestion for our user to pick.</p>
 
-<h2 id="in-gameitembuildsuggestion">In-game Item build Suggestion</h2>
+<h2 id="in-gameitembuildadvice">In-game Item build Advice</h2>
 
-<p>Cras vitae augue varius, commodo lectus eget, tempor mi. Aliquam a malesuada nisi. Fusce ac leo sed mauris finibus tempor. Quisque vitae auctor enim. Duis imperdiet nulla eu malesuada convallis. Aenean consequat nec dui sed mattis. Pellentesque a bibendum nibh. Nulla vitae tempus justo. Praesent rhoncus ac mi quis sodales. Duis at ante porta, maximus massa aliquam, euismod nisi.</p>
+<p>The detection result (including enemy builds and your current build) once you clicked “Tab” to check the score board. When you recalled back to your basement, and click the shop, our build suggestion will show as a litter black suggestion box on the top right corner, you can click the items in it to search in the shop, and will never blind anything on the map.</p>
 
 <h2 id="minimapwarning">Minimap Warning</h2>
 
-<p>Cras vitae augue varius, commodo lectus eget, tempor mi. Aliquam a malesuada nisi. Fusce ac leo sed mauris finibus tempor. Quisque vitae auctor enim. Duis imperdiet nulla eu malesuada convallis. Aenean consequat nec dui sed mattis. Pellentesque a bibendum nibh. Nulla vitae tempus justo. Praesent rhoncus ac mi quis sodales. Duis at ante porta, maximus massa aliquam, euismod nisi.</p>
+<p>The assistant keeps tracking enemy’s icons on minimap, and got screen shot each second, then it will calculate the distance between each enemy champion and your line. It also keep tracking enemy’s location and calculate the distance between them and Baron/Dragon, if they keep getting close to these 2 positions for 2 to 3 seconds in last 5 seconds, and their location 5 seconds ago is not too far from these 2 positions, you will get an alert. </p>
                     </div>
 
                     <div class="col-sm-12 sidebar">
@@ -95,14 +103,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 footer-content">
-					<ul class="navbar-nav ml-auto"><li class="nav-item active"><a href="./" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item"><a href="markdown/" rel="" class="nav-link">Technical Paper</a></li><li class="nav-item"><a href="markdown-2/" rel="" class="nav-link">Team</a></li></ul>
+					<ul class="navbar-nav ml-auto"><li class="nav-item active"><a href="./" rel="" class="nav-link">Home</a></li><li class="nav-item"><a href="photos/" rel="" class="nav-link">Screenshots</a></li><li class="nav-item"><a href="markdown/" rel="" class="nav-link">Technical Detail</a></li><li class="nav-item"><a href="markdown-2/" rel="" class="nav-link">Team</a></li></ul>
 					CSCI 599 &copy; USC <a href="#" id="rw_email_contact">Contact Us</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":zi";var _rwObsfuscatedHref3 = "hen";var _rwObsfuscatedHref4 = "ggo";var _rwObsfuscatedHref5 = "@us";var _rwObsfuscatedHref6 = "c.e";var _rwObsfuscatedHref7 = "du";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6+_rwObsfuscatedHref7; document.getElementById("rw_email_contact").href = _rwObsfuscatedHref;</script>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	<script type="text/javascript" src="rw_common/themes/Engineer/js/main.js?rwcache=609401686"></script>
+	<script type="text/javascript" src="rw_common/themes/Engineer/js/main.js?rwcache=609403621"></script>
 </body>
 
 </html>
