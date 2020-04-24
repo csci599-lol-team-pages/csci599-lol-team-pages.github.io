@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/index.html</loc>
+		<loc>https://csci599-lol.site/index.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/photos/index.html</loc>
+		<loc>https://csci599-lol.site/photos/index.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/photos/files/page2-1000-full.html</loc>
+		<loc>https://csci599-lol.site/photos/files/page2-1000-full.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/photos/files/page2-1001-full.html</loc>
+		<loc>https://csci599-lol.site/photos/files/page2-1001-full.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/photos/files/page2-1002-full.html</loc>
+		<loc>https://csci599-lol.site/photos/files/page2-1002-full.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/photos/files/page2-1003-full.html</loc>
+		<loc>https://csci599-lol.site/photos/files/page2-1003-full.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/markdown/index.html</loc>
+		<loc>https://csci599-lol.site/markdown/index.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/blog/index.html</loc>
+		<loc>https://csci599-lol.site/blog/index.html</loc>
 	</url>
 	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/blog/files/752f82acc7eb77c807d708e2ecb0504f-1.html</loc>
-	</url>
-	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/blog/files/3dab9509172385fac5b539cc1a10fb3f-0.html</loc>
-	</url>
-	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/blog/files/archive-july-2018.html</loc>
-	</url>
-	<url>
-		<loc>http://csci-599.s3-website-us-west-1.amazonaws.com/markdown-2/index.html</loc>
+		<loc>https://csci599-lol.site/markdown-2/index.html</loc>
 	</url>
 </urlset>
